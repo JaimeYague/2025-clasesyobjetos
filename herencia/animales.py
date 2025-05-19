@@ -13,35 +13,6 @@ class Perro(Animal):
 class Caballo(Animal):
     def __init__(self, nombre):
         super().__init__(nombre)
-        self.registrar()
-        self.max = 5
-        self.carga = 0
-
-    def cargar(self, carga):
-        self.carga = carga
-        if self.carga > self.max:
-            print(f"El caballo {self.nombre} va sobrecargado")
-
-
-# Larva sobrescribe el método
-class Larva(Animal):
-    def come(self):
-        self.comidas += 0.1
-        print("Me fabrica seda")
-        print("La Larva SE TRANFORMA en mariposa")
-
-
-# Gremiln EXTIENDE el método
-class Gremlin(Animal):
-    def come(self):
-        super().come()                  # Primero ejecuta el comportamiento del super
-        print("Gremlin se TRANSFORMA")  # Luego expande la funcionalidad
-
-
-<<<<<<< Updated upstream
-class Caballo(Animal):
-    def __init__(self, nombre):
-        super().__init__(nombre)
         self.max = 30
         self.peso = 0
 
@@ -57,3 +28,18 @@ class Caballo(Animal):
 
     def descargar(self):
         return self.peso
+
+
+# Larva sobrescribe el método
+class Larva(Animal):
+    def come(self):
+        self.comidas += 0.1
+        print("Me fabrica seda")
+        print("La Larva SE TRANFORMA en mariposa")
+
+
+# Gremiln EXTIENDE el método
+class Gremlin(Animal):
+    def come(self):
+        super().come()                  # Primero ejecuta el comportamiento del super
+        print("Gremlin se TRANSFORMA")  # Luego expande la funcionalidad
